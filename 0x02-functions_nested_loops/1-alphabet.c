@@ -1,25 +1,16 @@
 #include "main.h"
-
 /**
- *main - Calls the print_alphabet function
+ *print_alphabet - prints alphabets in lower case
  *
- *Return: always 0 (success)
+ *Return: none
  */
-
-int main(void)
-{
-print_alphabet();
-return (0);
-}
-
-/*function declared fron the main.h*/
 void print_alphabet()
 {
 char c = 'a';
 while (c <= 'z')
 {
-putchar(c);
+_putchar(c);
 c++;
 }
-putchar('\n');
+_putchar('\n');
 }
