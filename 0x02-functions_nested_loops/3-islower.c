@@ -3,7 +3,7 @@
 /**
  *_islower - checks if the argument is lowercase or not
  *@c: is the parament
- *Description: the unsigned char gets the caracter form of any 
+ *Description: the unsigned char gets the caracter form of any
  *value/char passed and it's what we use to compare
  *
  *Return: 1 (success) and 0 (fail)
