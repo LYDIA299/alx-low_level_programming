@@ -23,4 +23,5 @@ printf(", %ld", next);
 count++;
 }
 printf("\n");
+return (0);
 }
