@@ -7,24 +7,34 @@
  */
 int main(void)
 {
-unsigned long int t0 = 0, t1 = 1, s;
+unsigned long int x, y, z, y1, y2, z1, z2;
 
-int i;
+y = 1;
+z = 2;
 
-for (i = 1; i <= 98; i++)
-{
-s = t0 + t1;
+printf("%lu", y);
 
-if (i != 98)
+for (x = 1; x < 91; x++)
 {
-printf("%lu, ", s);
+printf(", %lu", z);
+z = z + y;
+y = z - y;
 }
-else
+
+y1 = y / 1000000000;
+y2 = y % 1000000000;
+z1 = z / 1000000000;
+z2 = z % 1000000000;
+
+for (x = 92; x < 99; ++x)
 {
-printf("%lu\n", s);
+printf(", %lu", z1 + (z2 / 1000000000));
+printf("%lu", z2 % 1000000000);
+z1 = z1 + y1;
+y1 = z1 - y1;
+z2 = z2 + y2;
+y2 = z2 - y2;
 }
-t0 = t1;
-t1 = s;
-}
+printf("\n");
 return (0);
 }
