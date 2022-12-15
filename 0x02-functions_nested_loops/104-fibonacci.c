@@ -7,21 +7,23 @@
  */
 int main(void)
 {
-unsigned long int first, second, next, count;
-first = 1;
-second = 2;
-count = 4;
-next = first + second;
-printf("%lu, %lu, %lu", first, second, next);
+unsigned long int t0 = 0, t1 = 1, s;
 
-while (count <= 98)
+int i;
+
+for (i = 1; i <= 98; i++)
 {
-first = second;
-second = next;
-next = first + second;
-printf(", %lu", next);
-count++;
+s = t0 + t1;
+
+if (i != 98)
+{
+printf("%lu, ", s);
 }
-printf("\n");
-return (0);
+else
+{
+printf("%lu\n", s);
+}
+t0 = t1;
+t1 = s;
+}
 }
