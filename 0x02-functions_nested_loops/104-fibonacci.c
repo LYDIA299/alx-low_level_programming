@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-long int first, second, next, count;
+unsigned long int first, second, next, count;
 first = 1;
 second = 2;
 count = 4;
