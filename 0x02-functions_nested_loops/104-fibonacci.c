@@ -26,4 +26,5 @@ printf("%lu\n", s);
 t0 = t1;
 t1 = s;
 }
+return (0);
 }
