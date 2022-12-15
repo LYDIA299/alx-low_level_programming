@@ -2,7 +2,6 @@
 
 /**
  *main - tests if the called function prints the correct output with (0)
- *
  *Return: 0
  */
 
