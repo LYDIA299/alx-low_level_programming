@@ -7,9 +7,10 @@
  *Return: maxPrime
  */
 
-long long maxPrimeFactors(long long n)
+int maxPrimeFactors(unsigned long int n)
 {
-	long long maxPrime = -1;
+	int maxPrime, i;
+	maxPrime = -1;
 
 	/*Print the number of 2s that divide n*/
 	while (n % 2 == 0)
@@ -26,7 +27,7 @@ long long maxPrimeFactors(long long n)
 
 	/* now we have to iterate only for integers*/
 	/*who does not have prime factor 2 and 3*/
-	for (int i = 5; i <= sqrt(n); i += 6)
+	for (i = 5; i <= sqrt(n); i += 6)
 	{
 		while (n % i == 0)
 		{
@@ -55,10 +56,10 @@ long long maxPrimeFactors(long long n)
 
 int main(void)
 {
-	long long n;
+	unsigned long int n;
 
 	n = 612852475143;
-	printf("%lld", maxPrimeFactors(n));
+	printf("%d", maxPrimeFactors(n));
 
 	return (0);
 }
