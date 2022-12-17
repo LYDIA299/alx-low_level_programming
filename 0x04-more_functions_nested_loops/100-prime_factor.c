@@ -1,33 +1,64 @@
+#include <math.h>
 #include <stdio.h>
+
 /**
- * main - largest prime factor of 612852475143
- * Return: 0
+ *maxPrimeFactors - A function to find largest prime factor
+ *@n: parameter
+ *Return: maxPrime
  */
+
+long long maxPrimeFactors(long long n)
+{
+	long long maxPrime = -1;
+
+	/*Print the number of 2s that divide n*/
+	while (n % 2 == 0)
+	{
+		maxPrime = 2;
+		n = n / 2;
+	}
+	/* n must be odd at this point*/
+	while (n % 3 == 0)
+	{
+		maxPrime = 3;
+		n = n / 3;
+	}
+
+	/* now we have to iterate only for integers*/
+	/*who does not have prime factor 2 and 3*/
+	for (int i = 5; i <= sqrt(n); i += 6)
+	{
+		while (n % i == 0)
+		{
+			maxPrime = i;
+			n = n / i;
+		}
+		while (n % (i + 2) == 0)
+		{
+			maxPrime = i + 2;
+			n = n / (i + 2);
+		}
+	}
+
+	/*This condition is to handle the case*/
+	/*when n is a prime number greater than 4*/
+	if (n > 4)
+		maxPrime = n;
+
+	return (maxPrime);
+}
+
+/**
+ *main - Entry point
+ *Return: 0 always
+ */
+
 int main(void)
 {
-	long int x, i, pf;
+	long long n;
 
-	x = 612852475143;
-	pg = -1;
+	n = 612852475143;
+	printf("%lld", maxPrimeFactors(n));
 
-	while (x % 2 == 0)
-	{
-		pf = 2;
-		x = x / 2;
-	}
-	for (i = 3; i <= x / 2; i = i + 2)
-	{
-		while (x % i == 0)
-		{
-			pf = i;
-			x = x / i;
-		}
-
-	}
-	if (x > 2)
-	{
-		pf = x;
-	}
-	printf("%ld\n", pf);
 	return (0);
 }
