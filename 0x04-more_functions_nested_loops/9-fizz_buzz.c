@@ -1,21 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/**
- *fizz_Buzz_test - prints numbers from 1 to 100
- *Description: if number is multiple of 3 prints Fizz, of 5 Buzz
- *and both FizzBuzz
- *Return: void
- */
-
 /*prototype*/
 void fizz_Buzz_test(void);
+
+/**
+ *main - Entry point
+ *Return: 0 always
+ */
 
 int main(void)
 {
 	fizz_Buzz_test();
 	return (0);
 }
+
+/**
+ *fizz_Buzz_test - prints numbers from 1 to 100
+ *Description: if number is multiple of 3 prints Fizz, of 5 Buzz
+ *and both FizzBuzz
+ *Return: void
+ */
 
 void fizz_Buzz_test(void)
 {
