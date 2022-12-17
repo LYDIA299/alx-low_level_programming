@@ -1,5 +1,6 @@
 #include <math.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  *maxPrimeFactors - A function to find largest prime factor
@@ -10,6 +11,7 @@
 int maxPrimeFactors(unsigned long int n)
 {
 	int maxPrime, i;
+
 	maxPrime = -1;
 
 	/*Print the number of 2s that divide n*/
@@ -59,7 +61,7 @@ int main(void)
 	unsigned long int n;
 
 	n = 612852475143;
-	printf("%d", maxPrimeFactors(n));
+	printf("%d\n", maxPrimeFactors(n));
 
 	return (0);
 }
