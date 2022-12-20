@@ -1,0 +1,11 @@
+#!bin/bash
+git add .
+
+#this reads input from the user
+read -p "Enter your commit message: " commit
+
+#saving file in the stage area
+git commit -m "$commit"
+
+#to push to the git repository
+git push
