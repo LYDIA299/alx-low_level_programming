@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  *reset_to_98 - takes in a pointer and changes the value
  *@n: parameter
