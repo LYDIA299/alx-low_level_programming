@@ -23,6 +23,6 @@ void print_array(int *a, int n)
 	}
 	else
 	{
-		printf("wrong input n less or equal to 0");
+		return;
 	}
 }
