@@ -21,4 +21,8 @@ void print_array(int *a, int n)
 			printf("%d\n", a[i]);
 	}
 	}
+	else
+	{
+		printf("wrong input n less or equal to 0");
+	}
 }
