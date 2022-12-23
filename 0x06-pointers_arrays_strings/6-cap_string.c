@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *isBreak - checks if the character is a breaker
+ *isBreaker - checks if the character is a breaker
  *@c: parameter
  *Return: 1 (true), 0 (false)
  */
