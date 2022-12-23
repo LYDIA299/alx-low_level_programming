@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *_strcpy - copies n elements of string from src to dest
+ *_strncpy - copies n elements of string from src to dest
  *@dest: parameter
  *@src: parameter
  *@n: parameter
