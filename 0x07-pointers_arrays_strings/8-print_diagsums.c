@@ -8,7 +8,7 @@
  *Return: nothing
  */
 
-void print_diagsum(int *a, int size)
+void print_diagsums(int *a, int size)
 {
 	int x, sum1 = 0, sum2 = 0;
 
