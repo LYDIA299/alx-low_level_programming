@@ -17,7 +17,7 @@ double sqrt1(int n, int a)
 		return (-1);
 	else if (a * a == n)
 		return (a);
-	else if (n >= 255)
+	else if (n >= 8000)
 		return (sqrt1(n, a / 2));
 	else
 		return (sqrt1(n, a - 1));
