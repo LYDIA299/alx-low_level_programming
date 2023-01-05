@@ -13,7 +13,7 @@ int is_prime(int x, int y)
 	if (y == 1)
 		return (1);
 	else if (x % y == 0 && (y != 1 || x != y))
-	    return (0);
+		return (0);
 	else
 		return (is_prime(x, y - 1));
 }
