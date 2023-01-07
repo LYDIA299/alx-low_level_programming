@@ -3,7 +3,7 @@
 /**
  *main - Entry point
  *@argc: parameter
- *@ergv: parameter
+ *@argv: parameter
  *Return: 0 always
  */
 
