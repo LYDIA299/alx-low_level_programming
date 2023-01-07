@@ -2,13 +2,14 @@
 
 /**
  *main - Entry point
- *@argc: parameter
- *@argv: parameter
+ *@argc: number of elements
+ *@argv: string array of commandline elements
  *Return: 0 always
  */
 
-int main(int argc, char *argv)
+int main(int argc, char *argv[])
 {
-	printf("%s\n", argv[0]);
+	if (argc > 0)
+		printf("%s\n", argv[0]);
 	return (0);
 }
