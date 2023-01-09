@@ -10,12 +10,12 @@ int strlength(char *str)
 {
 	int i = 0;
 
-	while(*str != '\0')
+	while (*str != '\0')
 	{
 		i++;
 		str++;
 	}
-	return (i + 1);
+	return (i);
 }
 
 /**
