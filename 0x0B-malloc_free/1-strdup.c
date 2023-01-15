@@ -27,7 +27,7 @@ int strlength(char *str)
 char *_strdup(char *str)
 {
 	char *ptr;
-	int n;
+	int i, n;
 
 	if (str == NULL)
 		return (NULL);
@@ -35,6 +35,11 @@ char *_strdup(char *str)
 	ptr = malloc(n * sizeof(*ptr) + 1);
 	if (ptr == NULL)
 		return (NULL);
-	ptr = strdup(str);
+	/*ptr = strdup(str);*/
+
+	for (i = 0; i < n; i++)
+		ptr[i] = str[i];
+	ptr[i] = '\0';
+	
 	return (ptr);
 }
