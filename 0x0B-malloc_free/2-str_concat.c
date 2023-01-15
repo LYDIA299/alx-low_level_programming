@@ -21,9 +21,9 @@ char *str_concat(char *s1, char *s2)
 	if (ptr == NULL)
 		return (NULL);
 
-	for (c = 0; c <= (i + j); c++)
+	for (c = 0; c < (i + j + 1); c++)
 	{
-		if ( c < i)
+		if (c < i)
 			ptr[c] = s1[c];
 		else
 			ptr[c] = s2[d++];
