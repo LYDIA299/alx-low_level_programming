@@ -25,7 +25,7 @@ unsigned int getLength(char *str)
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int len_s1, len_s2, i;
+	unsigned int len_s1, len_s2, i, l;
 	char *p;
 
 	if (s1 == NULL)
@@ -37,34 +37,25 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	len_s1 = getLength(s1);
 
 	if (n >= len_s2)
+		l = len_s1 + len_s2;
+	else
+		l = len_s1 + n;
+
+	/*allocating space with malloc*/
+	p = malloc(sizeof(char) * l + 1);
+	if (p == NULL)
+		return (NULL);
+
+	for (i = 0; i < l; i++)
 	{
-		p = malloc(sizeof(char) * (len_s1 + len_s2) + 1);
-		if (p == NULL)
-			return (NULL);
-		for (i = 0; i < len_s1; i++)
+		if (i < len_s1)
+		{
 			p[i] = s1[i];
-		for (i = len_s1; i < (len_s1 + len_s2); i++)
+		}
+		else
 		{
 			p[i] = *s2;
 			s2++;
-		}
-
-	}
-	else
-	{
-		for (i = 0; i < n; i++)
-		{
-			p = malloc(sizeof(char) * (len_s2 + n) + 1);
-			if (p == NULL)
-				return (NULL);
-			for (i = 0; i < len_s1; i++)
-				p[i] = s1[i];
-			for (i = len_s1; i < (len_s1 + n); i++)
-			{
-				p[i] = *s2;
-				s2++;
-			}
-
 		}
 	}
 	p[i] = '\0';
