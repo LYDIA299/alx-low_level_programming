@@ -2,7 +2,7 @@
 
 /**
  *print_strings - prints strings
- *@separator string to be printed between the strings
+ *@separator: string to be printed between the strings
  *@n: number of strings passed in
  *Return: void
  */
@@ -19,7 +19,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		str = va_arg(strList, char *);
 		if (str == NULL)
-			printf("nil");
+			printf("(nil)");
 		else
 			printf("%s", str);
 
