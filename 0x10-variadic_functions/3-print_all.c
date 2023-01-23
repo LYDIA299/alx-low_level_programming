@@ -9,13 +9,21 @@
 void print_all(const char * const format, ...)
 {
 	va_list valist;
-	char *str;
-	int i = 0;
+	char *str, list_type[] = "cifs";
+	int j, i = 0;
 
 	va_start(valist, format);
-
 	while (format[i])
 	{
+		j = 0;
+		while (list_type[j])
+		{
+			if (format[i] == list_type[j] && i)
+			{
+				printf(", ");
+				break;
+			} j++;
+		}
 		switch (format[i])
 		{
 		case 'c':
@@ -37,11 +45,7 @@ void print_all(const char * const format, ...)
 			printf("(nil)");
 			break;
 		}
-		if (format[i + 1] && i)
-			printf(", ");
 		i++;
 	}
-	printf("\n");
-
-	va_end(valist);
+	printf("\n"), va_end(valist);
 }

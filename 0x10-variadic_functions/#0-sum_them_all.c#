@@ -1,0 +1,20 @@
+#include "variadic_functions.h"
+
+/**
+ *sum_them_all - adds all the given arguments
+ *@n: number of arguments
+ *Return: sum
+ */
+
+int sum_them_all(const unsigned int n, ...)
+{
+	va_list intlist;
+	int i, sum;
+
+	sum = 0;
+	if (n > 0)
+	{
+		va_start(intlist, n);
+		
+
+		va_end(intlist);
