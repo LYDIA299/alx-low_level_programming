@@ -1,4 +1,4 @@
-#include <stddef.h>
+#include <stdio.h>
 
 /**
  * array_iterator - executes a function given through the parameters
@@ -11,7 +11,7 @@
 
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	size_t i;
+	unsigned int i;
 
 	if (!array || !size || !action)
 		return;

@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "function_pointers.h"
 
+void print_elem(int elem);
+void print_elem_hex(int elem);
 /**
  * print_elem - prints an integer
  * @elem: the integer to print
