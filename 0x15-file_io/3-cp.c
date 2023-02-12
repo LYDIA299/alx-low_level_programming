@@ -8,7 +8,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int fd_from, fd_to, close_from, close_to, nrd, nwr;
+	int fd_from, fd_to, close_from, close_to;
+	ssize_t nrd, nwr;
 	char buf[BUFSIZE];
 
 	if (argc != 3)
